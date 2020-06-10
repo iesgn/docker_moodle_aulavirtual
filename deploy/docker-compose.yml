@@ -6,7 +6,7 @@ services:
     container_name: moodle_$URL_DEPLOY
     image: iesgn/moodle_aulavirtual:$VERSION_DEPLOY
     volumes:
-      - './data/$URL_DEPLOY/moodledata:/var/www/moodledata:rw'
+      - '/srv/moodledata_aulavirtual:/var/www/moodledata:rw'
     ports:
       - '$PORT_DEPLOY:80'
     environment:
