@@ -2,8 +2,8 @@ FROM debian:buster
 MAINTAINER José Domingo Muñoz "josedom24@gmail.com"
 
 ARG MOODLE_VERSION=moodle-latest-38.zip
-#ARG URL_MOD_JISI=https://moodle.org/plugins/download.php/21488/mod_jitsi_moodle38_2020050700.zip 
-#ARG MOD_JITSI=mod_jitsi_moodle38_2020050700.zip
+ARG URL_MOD_JISI=https://moodle.org/plugins/download.php/21488/mod_jitsi_moodle38_2020050700.zip 
+ARG MOD_JITSI=mod_jitsi_moodle38_2020050700.zip
 #ARG URL_THEME=https://moodle.org/plugins/download.php/21501/theme_moove_moodle38_2020050700.zip
 #ARG THEME=theme_moove_moodle38_2020050700.zip
 RUN apt-get update \
@@ -23,11 +23,11 @@ RUN wget https://download.moodle.org/download.php/direct/stable38/${MOODLE_VERSI
     && mkdir moodledata \
     && chown -R www-data: moodledata 
 
-#WORKDIR /var/www/html/mod
-#RUN wget ${URL_MOD_JISI} \
-#    && unzip ${MOD_JITSI} \
-#    && rm ${MOD_JITSI} \
-#    && chown -R www-data: jitsi 
+WORKDIR /var/www/html/mod
+RUN wget ${URL_MOD_JISI} \
+    && unzip ${MOD_JITSI} \
+    && rm ${MOD_JITSI} \
+    && chown -R www-data: jitsi 
 #
 #WORKDIR /var/www/html/theme
 #RUN wget ${URL_THEME} \
