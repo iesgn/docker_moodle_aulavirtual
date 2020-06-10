@@ -13,7 +13,7 @@ services:
       MOODLE_DBNAME: ${DB_NAME}
       MOODLE_DBUSER: ${DB_USER}
       MOODLE_DBPASS: ${DB_PASSWORD}
-      MOODLE_DBHOST: mariadb_${URL_DEPLOY}
+      MOODLE_DBHOST: sql.gonzalonazareno.org
       # development
       #MOODLE_WWWROOT: http://$URL_DEPLOY:$PORT_DEPLOY
       # production
