@@ -5,7 +5,6 @@ services:
   moodle:
     container_name: moodle_$URL_DEPLOY
     image: iesgn/moodle_aulavirtual:$VERSION_DEPLOY
-    network_mode: "host"
     volumes:
       - '/srv/moodledata_aulavirtual:/var/www/moodledata:rw'
     ports:
@@ -14,7 +13,7 @@ services:
       MOODLE_DBNAME: ${DB_NAME}
       MOODLE_DBUSER: ${DB_USER}
       MOODLE_DBPASS: ${DB_PASSWORD}
-      MOODLE_DBHOST: localhost
+      MOODLE_DBHOST: sql.gonzalonazareno.org
       # development
       #MOODLE_WWWROOT: http://$URL_DEPLOY:$PORT_DEPLOY
       # production
