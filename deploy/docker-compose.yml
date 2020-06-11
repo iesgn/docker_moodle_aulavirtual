@@ -11,6 +11,7 @@ services:
       - '$PORT_DEPLOY:80'
     extra_hosts:
       - "sql.gonzalonazareno.org:172.18.0.1"
+      - "correo.gonzalonazareno.org:172.18.0.1"
     environment:
       MOODLE_DBNAME: ${DB_NAME}
       MOODLE_DBUSER: ${DB_USER}
