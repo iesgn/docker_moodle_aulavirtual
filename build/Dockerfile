@@ -36,7 +36,7 @@ RUN wget ${URL_MOD_JISI} \
 #    && chown -R www-data: moove 
 
 
-COPY cron /opt/moodle/cron
+#COPY cron /opt/moodle/cron
 COPY run.sh /usr/local/bin/run.sh
 RUN chmod +x /usr/local/bin/run.sh
 COPY config.php /var/www/html/config.php
