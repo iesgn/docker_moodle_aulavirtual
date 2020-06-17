@@ -13,9 +13,9 @@ sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 256M/g" /etc/php/7.3/ap
 
 
 # Adding cron entries
-ln -fs /opt/moodle/cron /etc/cron.d/moodle
+#ln -fs /opt/moodle/cron /etc/cron.d/moodle
 
-/usr/sbin/cron
+#/usr/sbin/cron
 echo "Starting Apache..."
 exec apache2ctl -D FOREGROUND
 
